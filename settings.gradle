@@ -13,4 +13,15 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "DataStorage"
-include ':app'
+
+def libraries = [
+        ':app',
+        ':presentation'
+] as String[]
+
+include libraries
+
+// Change each module's gradle filename - https://stackoverflow.com/a/30878796
+rootProject.children.each{
+    it.buildFileName = it.name + '.gradle'
+}
