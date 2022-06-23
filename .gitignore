@@ -38,7 +38,11 @@ captures/
 
 # IntelliJ
 *.iml
+.idea/misc.xml
+.idea/.name
+.idea/.gitignore
 .idea/workspace.xml
+.idea/compiler.xml
 .idea/tasks.xml
 .idea/gradle.xml
 .idea/assetWizardSettings.xml
