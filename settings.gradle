@@ -16,6 +16,8 @@ rootProject.name = "DataStorage"
 
 def libraries = [
         ':app',
+        ':data',
+        ':domain',
         ':presentation'
 ] as String[]
 
