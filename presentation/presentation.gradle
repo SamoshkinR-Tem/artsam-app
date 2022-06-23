@@ -24,6 +24,8 @@ dependencies {
     api "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
     api "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
 
+    api "androidx.preference:preference:1.2.0"
+
     // Test
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

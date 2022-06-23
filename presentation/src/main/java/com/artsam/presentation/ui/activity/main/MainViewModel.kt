@@ -1,4 +1,4 @@
-package com.artsam.presentation.ui.activity
+package com.artsam.presentation.ui.activity.main
 
 import android.view.MenuItem
 import android.view.View
