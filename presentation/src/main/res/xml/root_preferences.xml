@@ -1,11 +1,29 @@
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <PreferenceCategory app:title="@string/messages_header">
+        <EditTextPreference
+            app:key="text_preference"
+            app:title="@string/text_preference"
+            app:useSimpleSummaryProvider="true" />
 
         <EditTextPreference
-            app:key="signature"
-            app:title="@string/signature_title"
-            app:useSimpleSummaryProvider="true" />
+            app:key="custom_summary"
+            app:title="@string/custom_summary_title" />
+
+        <Preference
+            app:key="start_new_activity"
+            app:title="@string/start_new_activity">
+        </Preference>
+
+        <Preference
+            app:key="start_web_page"
+            app:title="@string/start_web_page">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://www.google.com" />
+
+        </Preference>
 
         <ListPreference
             app:defaultValue="reply"
@@ -18,6 +36,10 @@
     </PreferenceCategory>
 
     <PreferenceCategory app:title="@string/sync_header">
+        <Preference
+            app:fragment="com.artsam.presentation.ui.fragment.settings.NotificationsSettingsFragment"
+            app:key="start_fragment"
+            app:title="Start NOTIFICATIONS settings fragment" />
 
         <SwitchPreferenceCompat
             app:key="sync"
@@ -29,12 +51,50 @@
             app:summaryOff="@string/attachment_summary_off"
             app:summaryOn="@string/attachment_summary_on"
             app:title="@string/attachment_title" />
-
     </PreferenceCategory>
 
-    <Preference
-        app:key="feedback"
-        app:summary="Report technical issues or suggest new features"
-        app:title="Send feedback" />
+    <PreferenceCategory app:title="@string/for_scrolling_header">
+
+        <Preference
+            app:key="feedback"
+            app:summary="TAP ME to see more items for screen scrolling"
+            app:title="Send feedback" />
+
+        <Preference
+            app:isPreferenceVisible="false"
+            app:key="feedback1"
+            app:summary="Report technical issues or suggest new features"
+            app:title="Send feedback" />
+
+        <Preference
+            app:isPreferenceVisible="false"
+            app:key="feedback2"
+            app:summary="Report technical issues or suggest new features"
+            app:title="Send feedback" />
+
+        <Preference
+            app:isPreferenceVisible="false"
+            app:key="feedback3"
+            app:summary="Report technical issues or suggest new features"
+            app:title="Send feedback" />
+
+        <Preference
+            app:isPreferenceVisible="false"
+            app:key="feedback4"
+            app:summary="Report technical issues or suggest new features"
+            app:title="Send feedback" />
+
+        <Preference
+            app:isPreferenceVisible="false"
+            app:key="feedback5"
+            app:summary="Report technical issues or suggest new features"
+            app:title="Send feedback" />
+
+        <Preference
+            app:isPreferenceVisible="false"
+            app:key="feedback6"
+            app:summary="Report technical issues or suggest new features"
+            app:title="Send feedback" />
+    </PreferenceCategory>
 
 </PreferenceScreen>

@@ -1,17 +1,24 @@
 package com.artsam.presentation.ui.activity.main
 
+import android.content.Context
+import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.PopupMenu
 import androidx.databinding.DataBindingUtil
+import androidx.preference.PreferenceManager
 import com.artsam.presentation.R
 import com.artsam.presentation.databinding.ActivityMainBinding
-import com.artsam.presentation.ui.fragment.SettingsFragment
+import com.artsam.presentation.ui.activity.help.HelpActivity
+import com.artsam.presentation.ui.activity.settings.SettingsActivity
+import com.artsam.presentation.ui.fragment.settings.SettingsFragment
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(){
 
     private val viewModel: MainViewModel by viewModels()
     private lateinit var binding: ActivityMainBinding
@@ -20,30 +27,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        binding.incAppBar.ivAppbarMenu.setOnClickListener(::showMenu)
-    }
-
-    private fun showMenu(view: View) {
-        val popup = PopupMenu(this, view)
-        popup.menuInflater.inflate(R.menu.overflow_menu, popup.menu)
-
-        popup.setOnMenuItemClickListener { menuItem: MenuItem ->
-
-            when (menuItem.itemId){
-                R.id.settings -> {
-                    supportFragmentManager
-                        .beginTransaction()
-                        .replace(R.id.fragment_container_view, SettingsFragment())
-                        .commit()
-                }
-            }
-
-            return@setOnMenuItemClickListener true
+        binding.btnStartSettingsActivity.setOnClickListener {
+            startActivity(Intent(this, SettingsActivity::class.java))
         }
-        popup.setOnDismissListener {
-            // Respond to popup being dismissed.
-        }
-        // Show the popup menu.
-        popup.show()
+
     }
 }

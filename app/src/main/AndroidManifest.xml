@@ -21,6 +21,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.artsam.presentation.ui.activity.help.HelpActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.artsam.presentation.ui.activity.settings.SettingsActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
