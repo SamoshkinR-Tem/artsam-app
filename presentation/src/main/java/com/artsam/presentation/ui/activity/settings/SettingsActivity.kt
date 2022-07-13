@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.PopupMenu
 import androidx.databinding.DataBindingUtil
+import androidx.preference.PreferenceManager
 import com.artsam.presentation.R
 import com.artsam.presentation.databinding.ActivitySettingsBinding
 import com.artsam.presentation.ui.activity.help.HelpActivity

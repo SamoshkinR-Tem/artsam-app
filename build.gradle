@@ -8,7 +8,12 @@ buildscript {
         core_splash_version = "1.0.0-rc01"
         appcompat_version = '1.4.2'
         material_version = '1.6.1'
-        lifecycle_version = '2.5.0-rc02'
+        lifecycle_version = '2.6.0-alpha01'
+
+        // Rx
+        rx_java_version = '2.2.21'
+        rx_kotlin_version = '2.4.0'
+        rx_android_version = '2.1.1'
     }
 }
 

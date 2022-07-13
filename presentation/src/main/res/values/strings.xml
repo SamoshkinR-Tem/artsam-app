@@ -33,5 +33,7 @@
     <string name="content_description_favorite">Some favorite content</string>
     <string name="content_description_search">search something</string>
     <string name="content_description_more">"tap to see more "</string>
+    <string name="app_specific_file_storage">App-specific file storage</string>
+    <string name="rx_example">RX example</string>
 
 </resources>

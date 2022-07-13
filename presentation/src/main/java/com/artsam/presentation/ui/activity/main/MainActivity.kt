@@ -1,28 +1,23 @@
 package com.artsam.presentation.ui.activity.main
 
-import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
+import android.os.Build
 import android.os.Bundle
-import android.view.MenuItem
-import android.view.View
 import androidx.activity.viewModels
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
-import androidx.appcompat.widget.PopupMenu
 import androidx.databinding.DataBindingUtil
-import androidx.preference.PreferenceManager
 import com.artsam.presentation.R
 import com.artsam.presentation.databinding.ActivityMainBinding
-import com.artsam.presentation.ui.activity.help.HelpActivity
 import com.artsam.presentation.ui.activity.settings.SettingsActivity
-import com.artsam.presentation.ui.fragment.settings.SettingsFragment
+import com.artsam.presentation.utils.RxExamples
 
 class MainActivity : AppCompatActivity(){
 
     private val viewModel: MainViewModel by viewModels()
     private lateinit var binding: ActivityMainBinding
 
+    @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -30,6 +25,14 @@ class MainActivity : AppCompatActivity(){
         binding.btnStartSettingsActivity.setOnClickListener {
             startActivity(Intent(this, SettingsActivity::class.java))
         }
-
+        binding.btnAppSpecificFileStorage.setOnClickListener {
+//            workWithExternalStorage()
+//            createDirInternal(applicationContext)
+//            deleteDir(applicationContext)
+        }
+        binding.btnRxExample.setOnClickListener {
+//            RxExamples.runSubjectExamples()
+            RxExamples.skip()
+        }
     }
 }
