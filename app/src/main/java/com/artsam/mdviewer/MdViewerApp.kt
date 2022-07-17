@@ -1,8 +1,8 @@
-package com.artsam.datastorage
+package com.artsam.mdviewer
 
 import android.app.Application
 
-class DataStorageApplication : Application() {
+class MdViewerApp : Application() {
 
     override fun onCreate() {
         super.onCreate()

@@ -7,7 +7,7 @@ apply from: "$project.rootDir/tools/android-common.gradle"
 
 android {
     defaultConfig {
-        applicationId "com.artsam.datastorage"
+        applicationId "com.artsam.mdviewer"
     }
 }
 

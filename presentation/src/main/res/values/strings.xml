@@ -1,7 +1,7 @@
 <resources>
 
     <string name="hello_world">Hello World</string>
-    <string name="app_bar_title">Data Storage</string>
+    <string name="app_bar_title">MD Viewer</string>
     <string name="theme_light">Light theme</string>
     <string name="theme_dark">Dark theme</string>
     <string name="settings">Settings</string>
