@@ -10,10 +10,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.PopupMenu
 import androidx.databinding.DataBindingUtil
-import androidx.preference.PreferenceManager
 import com.artsam.presentation.R
 import com.artsam.presentation.databinding.ActivitySettingsBinding
-import com.artsam.presentation.ui.activity.help.HelpActivity
 import com.artsam.presentation.ui.fragment.settings.SettingsFragment
 
 class SettingsActivity: AppCompatActivity(), SharedPreferences.OnSharedPreferenceChangeListener  {
@@ -32,8 +30,6 @@ class SettingsActivity: AppCompatActivity(), SharedPreferences.OnSharedPreferenc
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_settings)
         binding.incAppBar.ivAppbarMenu.setOnClickListener(::showMenu)
-        binding.btnStartActivity.setOnClickListener { startHelpActivity() }
-
     }
 
     private fun getCurrentTheme() = sharedPref.getString(getString(R.string.current_theme), getString(R.string.theme_light))!!
@@ -80,11 +76,6 @@ class SettingsActivity: AppCompatActivity(), SharedPreferences.OnSharedPreferenc
         }
         popup.setOnDismissListener {} // Respond to popup being dismissed.
         popup.show() // Show the popup menu.
-    }
-
-    private fun startHelpActivity() {
-        val intent = Intent(this, HelpActivity::class.java)
-        startActivity(intent)
     }
 
     /*

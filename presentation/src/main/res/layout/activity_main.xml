@@ -17,14 +17,23 @@
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/topAppBar"
-                style="@style/Widget.MaterialComponents.Toolbar.Primary"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:menu="@menu/top_app_bar"
+                app:menu="@menu/main_app_bar_menu"
                 app:navigationIcon="@drawable/ic_menu_24dp"
                 app:title="@string/app_bar_title" />
 
         </com.google.android.material.appbar.AppBarLayout>
+
+        <Button
+            android:id="@+id/btn_Md_Viewer"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/md_viewer"
+            app:layout_constraintBottom_toTopOf="@id/btn_rx_example" />
 
         <Button
             android:id="@+id/btn_rx_example"

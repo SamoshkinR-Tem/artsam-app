@@ -8,7 +8,7 @@ import androidx.preference.EditTextPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.artsam.presentation.R
-import com.artsam.presentation.ui.activity.help.HelpActivity
+import com.artsam.presentation.ui.activity.help.MdviewerActivity
 
 class SettingsFragment : PreferenceFragmentCompat() {
 
@@ -49,14 +49,13 @@ class SettingsFragment : PreferenceFragmentCompat() {
         }
 
         val startHelpActivity : Preference? = findPreference("start_new_activity")
-        val intent = Intent(requireContext(), HelpActivity::class.java)
+        val intent = Intent(requireContext(), MdviewerActivity::class.java)
         startHelpActivity?.intent = intent
 
-
         // Control Preference visibility
+        // if(/*some feature*/) {
+        //    val forScrollingPreference: EditTextPreference? = findPreference("feedback1")
+        //    forScrollingPreference?.isVisible = true
+        //}
     }
 }
-//        if(/*some feature*/) {
-//            val forScrollingPreference: EditTextPreference? = findPreference("feedback1")
-//            forScrollingPreference?.isVisible = true
-//        }

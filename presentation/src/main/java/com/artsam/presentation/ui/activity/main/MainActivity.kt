@@ -9,10 +9,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.artsam.presentation.R
 import com.artsam.presentation.databinding.ActivityMainBinding
+import com.artsam.presentation.ui.activity.help.MdviewerActivity
 import com.artsam.presentation.ui.activity.settings.SettingsActivity
 import com.artsam.presentation.utils.RxExamples
 
-class MainActivity : AppCompatActivity(){
+class MainActivity : AppCompatActivity() {
 
     private val viewModel: MainViewModel by viewModels()
     private lateinit var binding: ActivityMainBinding
@@ -33,6 +34,9 @@ class MainActivity : AppCompatActivity(){
         binding.btnRxExample.setOnClickListener {
 //            RxExamples.runSubjectExamples()
             RxExamples.skip()
+        }
+        binding.btnMdViewer.setOnClickListener {
+            startActivity(Intent(this, MdviewerActivity::class.java))
         }
     }
 }
