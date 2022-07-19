@@ -8,7 +8,7 @@ import androidx.preference.EditTextPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.artsam.presentation.R
-import com.artsam.presentation.ui.activity.help.MdviewerActivity
+import com.artsam.presentation.mdviewer.ui.activity.MdviewerActivity
 
 class SettingsFragment : PreferenceFragmentCompat() {
 

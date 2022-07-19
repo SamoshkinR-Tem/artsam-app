@@ -18,7 +18,8 @@
             android:exported="true">
         </activity>
         <activity
-            android:name="com.artsam.presentation.ui.activity.help.MdviewerActivity"
+            android:name="com.artsam.presentation.mdviewer.ui.activity.MdviewerActivity"
+            android:screenOrientation="landscape"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -67,7 +67,7 @@ class SettingsActivity: AppCompatActivity(), SharedPreferences.OnSharedPreferenc
                     }
                 }
                 R.id.settings -> {
-                    supportFragmentManager.beginTransaction().replace(R.id.fragment_container_view, SettingsFragment())
+                    supportFragmentManager.beginTransaction().replace(R.id.fcv_settings, SettingsFragment())
                         .commit()
                 }
             }
