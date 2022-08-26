@@ -1,4 +1,4 @@
-package com.artsam.mdviewer
+package com.artsam.resume
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

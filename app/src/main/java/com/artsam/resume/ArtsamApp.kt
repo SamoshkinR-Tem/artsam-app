@@ -1,8 +1,8 @@
-package com.artsam.mdviewer
+package com.artsam.resume
 
 import android.app.Application
 
-class MdViewerApp : Application() {
+class ArtsamApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
